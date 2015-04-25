@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="mybatis-plus">
+    <ANNOTATIONS>
+      <root url="jar://D:/mybatis-plus.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://D:/mybatis-plus.zip!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/mybatis-plus.zip!/" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="jar://D:/mybatis-plus.zip!/" />
+    </NATIVE>
+    <SOURCES>
+      <root url="jar://D:/mybatis-plus.zip!/" />
+    </SOURCES>
+    <jarDirectory url="jar://D:/mybatis-plus.zip!/" recursive="false" />
+    <jarDirectory url="jar://D:/mybatis-plus.zip!/" recursive="false" type="SOURCES" />
+  </library>
+</component>
