@@ -4,7 +4,48 @@
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
            version="3.0">
+    <display-name>Servlet</display-name>
     <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
+    <servlet>
+        <servlet-name>Group</servlet-name>
+        <servlet-class>GroupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Group</servlet-name>
+        <url-pattern>/GroupServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>User</servlet-name>
+        <servlet-class>UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>User</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Premission</servlet-name>
+        <servlet-class>PremissionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Premission</servlet-name>
+        <url-pattern>/PremissionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Role</servlet-name>
+        <servlet-class>RoleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Role</servlet-name>
+        <url-pattern>/RoleServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
