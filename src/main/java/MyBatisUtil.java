@@ -9,17 +9,21 @@ import java.io.Reader;
  */
 public class MyBatisUtil {
     private static SqlSessionFactory sqlSessionFactory;
-    private MyBatisUtil(){}
-    static{
+
+    private MyBatisUtil() {
+    }
+
+    static {
         Reader reader = null;
-        try{
+        try {
             reader = Resources.getResourceAsReader("mybatis-config.xml");
-        } catch(Exception e){
+        } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
     }
-    public static SqlSessionFactory getSqlSessionFactory(){
+
+    public static SqlSessionFactory getSqlSessionFactory() {
         return sqlSessionFactory;
     }
 }

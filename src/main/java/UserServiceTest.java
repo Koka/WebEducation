@@ -11,23 +11,24 @@ public class UserServiceTest {
     public static UserGroupService userService;
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() {
         userService = new UserGroupService();
     }
+
     @AfterClass
-    public static void teardown(){
+    public static void teardown() {
         userService = null;
     }
 
 
     @Test
-    public void testInsertUser(){
+    public void testInsertUser() {
         UserGroup userGroup = new UserGroup();
         UserService us = new UserService();
         GroupService gs = new GroupService();
 
-        List<UserGroup> ug =  userService.selectByUser(us.getUserById(4));
-        for(UserGroup u:ug){
+        List<UserGroup> ug = userService.selectByUser(us.getUserById(4));
+        for (UserGroup u : ug) {
             System.out.println(ug.toString());
         }
     }

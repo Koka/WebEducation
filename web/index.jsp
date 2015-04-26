@@ -15,5 +15,8 @@
 <a href="User.jsp">Add new user</a><br>
 <a href="Premission.jsp">Add new premission</a><br>
 <a href="Role.jsp">Add new role</a><br>
+<a href="UserGroup.jsp">Add group for user</a><br>
+<a href="RolePremission.jsp">Add premission for role</a><br>
+<a href="UserRole.jsp">Add role for user</a><br>
 </body>
 </html>

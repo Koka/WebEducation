@@ -1,4 +1,3 @@
-
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -91,5 +90,6 @@ public interface GroupsMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(Groups record);
+
     List<Groups> getAllGroups();
 }

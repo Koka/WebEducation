@@ -12,7 +12,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <title> Roles   </title>
+  <title> Roles </title>
 </head>
 <body>
 <form action="RoleServlet">

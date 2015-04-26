@@ -1,5 +1,3 @@
-
-
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -92,5 +90,6 @@ public interface PremissionsMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(Premissions record);
+
     List<Premissions> getAllPremissions();
 }

@@ -8,31 +8,31 @@ import java.util.List;
 public class GroupService {
     public void insertGroup(Groups group) {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
+        try {
             GroupsMapper groupMapper = sqlSession.getMapper(GroupsMapper.class);
             groupMapper.insert(group);
             sqlSession.commit();
-        }finally{
+        } finally {
             sqlSession.close();
         }
     }
 
     public Groups getGroupById(Integer groupId) {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
-            GroupsMapper groupMapper =(GroupsMapper) sqlSession.getMapper(GroupsMapper.class);
+        try {
+            GroupsMapper groupMapper = (GroupsMapper) sqlSession.getMapper(GroupsMapper.class);
             return groupMapper.selectByPrimaryKey(groupId);
-        }finally{
+        } finally {
             sqlSession.close();
         }
     }
 
     public List<Groups> getAllGroups() {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
+        try {
             GroupsMapper groupMapper = sqlSession.getMapper(GroupsMapper.class);
             return groupMapper.getAllGroups();
-        }finally{
+        } finally {
             sqlSession.close();
         }
     }
@@ -40,11 +40,11 @@ public class GroupService {
 
     public void deleteGroup(Integer groupId) {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
+        try {
             GroupsMapper groupMapper = sqlSession.getMapper(GroupsMapper.class);
             groupMapper.deleteByPrimaryKey(groupId);
             sqlSession.commit();
-        }finally{
+        } finally {
             sqlSession.close();
         }
 

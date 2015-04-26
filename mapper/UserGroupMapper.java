@@ -1,5 +1,3 @@
-
-
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -60,6 +58,8 @@ public interface UserGroupMapper {
      * @mbggenerated
      */
     int updateByExample(@Param("record") UserGroup record, @Param("example") UserGroupExample example);
+
     List<UserGroup> selectByUser(Integer id);
+
     List<UserGroup> selectByGroup(Integer id);
 }

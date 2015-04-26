@@ -1,5 +1,3 @@
-
-
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -60,4 +58,7 @@ public interface UserRoleMapper {
      * @mbggenerated
      */
     int updateByExample(@Param("record") UserRole record, @Param("example") UserRoleExample example);
+    List<UserRole> selectByUser(Integer id);
+
+    List<UserRole> selectByRole(Integer id);
 }

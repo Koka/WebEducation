@@ -1,4 +1,3 @@
-
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -91,5 +90,6 @@ public interface RolesMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(Roles record);
+
     List<Roles> getAllRoles();
 }

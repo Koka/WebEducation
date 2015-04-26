@@ -1,5 +1,3 @@
-
-
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -60,4 +58,8 @@ public interface RolePremissionMapper {
      * @mbggenerated
      */
     int updateByExample(@Param("record") RolePremission record, @Param("example") RolePremissionExample example);
+
+    List<RolePremission> selectByRole(Integer id);
+
+    List<RolePremission> selectByPremission(Integer id);
 }

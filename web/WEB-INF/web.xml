@@ -48,4 +48,32 @@
         <servlet-name>Role</servlet-name>
         <url-pattern>/RoleServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserGroup</servlet-name>
+        <servlet-class>UserGroupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserGroup</servlet-name>
+        <url-pattern>/UserGroupServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RolePremission</servlet-name>
+        <servlet-class>RolePremissionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RolePremission</servlet-name>
+        <url-pattern>/RolePremissionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserRole</servlet-name>
+        <servlet-class>UserRoleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserRole</servlet-name>
+        <url-pattern>/UserRoleServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

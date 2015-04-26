@@ -8,31 +8,31 @@ import java.util.List;
 public class RoleService {
     public void insertRole(Roles role) {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
+        try {
             RolesMapper roleMapper = sqlSession.getMapper(RolesMapper.class);
             roleMapper.insert(role);
             sqlSession.commit();
-        }finally{
+        } finally {
             sqlSession.close();
         }
     }
 
     public Roles getRoleById(Integer roleId) {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
-            RolesMapper roleMapper =(RolesMapper) sqlSession.getMapper(RolesMapper.class);
+        try {
+            RolesMapper roleMapper = (RolesMapper) sqlSession.getMapper(RolesMapper.class);
             return roleMapper.selectByPrimaryKey(roleId);
-        }finally{
+        } finally {
             sqlSession.close();
         }
     }
 
     public List<Roles> getAllRoles() {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
+        try {
             RolesMapper roleMapper = sqlSession.getMapper(RolesMapper.class);
             return roleMapper.getAllRoles();
-        }finally{
+        } finally {
             sqlSession.close();
         }
     }
@@ -40,11 +40,11 @@ public class RoleService {
 
     public void deleteRole(Integer roleId) {
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try{
+        try {
             RolesMapper roleMapper = sqlSession.getMapper(RolesMapper.class);
             roleMapper.deleteByPrimaryKey(roleId);
             sqlSession.commit();
-        }finally{
+        } finally {
             sqlSession.close();
         }
 

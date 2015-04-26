@@ -14,6 +14,6 @@ public class RoleServlet extends HttpServlet {
         Roles roles = new Roles();
         roles.setName(name);
         roleService.insertRole(roles);
-        response.sendRedirect("");
     }
+
 }
