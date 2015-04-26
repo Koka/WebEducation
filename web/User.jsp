@@ -28,5 +28,6 @@
   <input type="text" name="username"size="20px">
   <input type="submit" value="submit">
 </form>
+<a href="index.jsp">Home</a><br>
 </body>
 </html>

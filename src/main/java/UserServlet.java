@@ -14,5 +14,6 @@ public class UserServlet extends HttpServlet {
         Users users = new Users();
         users.setName(name);
         userService.insertUser(users);
+        response.sendRedirect("");
     }
 }

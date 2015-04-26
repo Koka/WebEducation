@@ -14,5 +14,6 @@ public class PremissionServlet extends HttpServlet {
         Premissions premissions = new Premissions();
         premissions.setName(name);
         premissionService.insertPremission(premissions);
+        response.sendRedirect("");
     }
 }

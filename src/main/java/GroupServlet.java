@@ -16,6 +16,7 @@ public class GroupServlet extends HttpServlet {
         Groups groups = new Groups();
         groups.setName(name);
         groupService.insertGroup(groups);
+        response.sendRedirect("");
     }
 }
 

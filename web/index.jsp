@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Sample</title>
+    <title>Home</title>
 </head>
 <body>
-
+<a href="Group.jsp">Add new group</a><br>
+<a href="User.jsp">Add new user</a><br>
+<a href="Premission.jsp">Add new premission</a><br>
+<a href="Role.jsp">Add new role</a><br>
 </body>
 </html>

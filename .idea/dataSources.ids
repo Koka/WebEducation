@@ -1591,7 +1591,7 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJlbWlzc2lvbnNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="premissions_pkey" columns="id"/>
-      <exported-key name="role_premission_group_id_fkey" table="role_premission" schema="public" catalog="postgres" columns="group_id"/>
+      <exported-key name="role_premission_premission_id_fkey" table="role_premission" schema="public" catalog="postgres" columns="premission_id"/>
     </table>
     <table name="premissions_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -1606,12 +1606,12 @@
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
     <table name="role_premission" schema="public" catalog="postgres" type="TABLE">
-      <column name="user_id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncm9sZV9wcmVtaXNzaW9uX3VzZXJfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="group_id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncm9sZV9wcmVtaXNzaW9uX2dyb3VwX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <foreign-key name="role_premission_group_id_fkey" columns="group_id" ref-table="premissions" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="role_premission_user_id_fkey" columns="user_id" ref-table="roles" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <column name="role_id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncm9sZV9wcmVtaXNzaW9uX3JvbGVfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="premission_id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncm9sZV9wcmVtaXNzaW9uX3ByZW1pc3Npb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <foreign-key name="role_premission_premission_id_fkey" columns="premission_id" ref-table="premissions" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="role_premission_role_id_fkey" columns="role_id" ref-table="roles" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
-    <table name="role_premission_group_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+    <table name="role_premission_premission_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1623,7 +1623,7 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
-    <table name="role_premission_user_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+    <table name="role_premission_role_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1639,8 +1639,8 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncm9sZXNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="roles_pkey" columns="id"/>
-      <exported-key name="role_premission_user_id_fkey" table="role_premission" schema="public" catalog="postgres" columns="user_id"/>
-      <exported-key name="user_role_group_id_fkey" table="user_role" schema="public" catalog="postgres" columns="group_id"/>
+      <exported-key name="role_premission_role_id_fkey" table="role_premission" schema="public" catalog="postgres" columns="role_id"/>
+      <exported-key name="user_role_role_id_fkey" table="user_role" schema="public" catalog="postgres" columns="role_id"/>
     </table>
     <table name="roles_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -1686,11 +1686,11 @@
     </table>
     <table name="user_role" schema="public" catalog="postgres" type="TABLE">
       <column name="user_id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcl9yb2xlX3VzZXJfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="group_id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcl9yb2xlX2dyb3VwX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <foreign-key name="user_role_group_id_fkey" columns="group_id" ref-table="roles" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <column name="role_id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcl9yb2xlX3JvbGVfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <foreign-key name="user_role_role_id_fkey" columns="role_id" ref-table="roles" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="user_role_user_id_fkey" columns="user_id" ref-table="users" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
-    <table name="user_role_group_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+    <table name="user_role_role_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
