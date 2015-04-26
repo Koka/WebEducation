@@ -181,4 +181,12 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+
+  <select id="selectByUser" parameterType="Integer" resultMap="BaseResultMap">
+    SELECT * from user_group WHERE user_id=#{id};
+  </select>
+
+  <select id="selectByGroup" parameterType="Integer" resultMap="BaseResultMap">
+    SELECT * from user_group WHERE group_id=#{id};
+  </select>
 </mapper>
