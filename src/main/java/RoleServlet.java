@@ -10,7 +10,7 @@ import java.io.IOException;
 public class RoleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("rolename");
-        RoleService roleService = new RoleService();
+        RoleService roleService = DAOFactory.getRoleService();
         Roles roles = new Roles();
         roles.setName(name);
         roleService.insertRole(roles);

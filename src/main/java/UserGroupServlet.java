@@ -12,11 +12,11 @@ public class UserGroupServlet extends HttpServlet {
         Integer userid = Integer.parseInt(request.getParameter("userId"));
         Integer groupid = Integer.parseInt(request.getParameter("groupId"));
         System.out.println(userid+" "+groupid);
-        UserService us = new UserService();
+        UserService us = DAOFactory.getUserService();
         Users user = us.getUserById(userid);
-        GroupService gs = new GroupService();
+        GroupService gs = DAOFactory.getGroupService();
         Groups group = gs.getGroupById(groupid);
-        UserGroupService userGroupService = new UserGroupService();
+        UserGroupService userGroupService = DAOFactory.getUserGroupService();
         userGroupService.insertUserGroup(user, group);
         response.sendRedirect("");
     }

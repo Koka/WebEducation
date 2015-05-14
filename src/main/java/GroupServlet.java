@@ -10,7 +10,7 @@ import java.io.IOException;
 public class GroupServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("groupname");
-        GroupService groupService = new GroupService();
+        GroupService groupService = DAOFactory.getGroupService();
         Groups groups = new Groups();
         groups.setName(name);
         groupService.insertGroup(groups);

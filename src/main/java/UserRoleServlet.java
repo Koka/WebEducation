@@ -12,13 +12,13 @@ public class UserRoleServlet extends HttpServlet {
         Integer userId = Integer.parseInt(request.getParameter("userId"));
         Integer roleId = Integer.parseInt(request.getParameter("roleId"));
         System.out.println(userId+" "+roleId);
-        UserService rs = new UserService();
+        UserService rs = DAOFactory.getUserService();
         Users user = rs.getUserById(userId);
-        RoleService ps = new RoleService();
+        RoleService ps = DAOFactory.getRoleService();
         Roles roles = ps.getRoleById(roleId);
         System.out.println(user.toString());
         System.out.println(roles.toString());
-        UserRoleService userroleService = new UserRoleService();
+        UserRoleService userroleService = DAOFactory.getUserRoleService();
         userroleService.insertUserRole(user, roles);
         response.sendRedirect("");
     }

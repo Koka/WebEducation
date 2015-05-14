@@ -12,11 +12,11 @@ public class RolePremissionServlet extends HttpServlet {
         Integer roleId = Integer.parseInt(request.getParameter("roleId"));
         Integer premissionId = Integer.parseInt(request.getParameter("premissionId"));
         System.out.println(roleId+" "+premissionId);
-        RoleService rs = new RoleService();
+        RoleService rs =  DAOFactory.getRoleService();
         Roles role = rs.getRoleById(roleId);
-        PremissionService ps = new PremissionService();
+        PremissionService ps = DAOFactory.getPremissionService();
         Premissions premissions = ps.getPremissionById(premissionId);
-        RolePremissionService rolePremissionService = new RolePremissionService();
+        RolePremissionService rolePremissionService = DAOFactory.getRolePremissionService();
         rolePremissionService.insertPremissionRole(premissions, role);
         response.sendRedirect("");
     }

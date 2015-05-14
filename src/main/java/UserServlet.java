@@ -10,7 +10,7 @@ import java.io.IOException;
 public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("username");
-        UserService userService = new UserService();
+        UserService userService = DAOFactory.getUserService();
         Users users = new Users();
         users.setName(name);
         userService.insertUser(users);

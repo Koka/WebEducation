@@ -10,7 +10,7 @@ import java.io.IOException;
 public class PremissionServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("premissionname");
-        PremissionService premissionService = new PremissionService();
+        PremissionService premissionService = DAOFactory.getPremissionService();
         Premissions premissions = new Premissions();
         premissions.setName(name);
         premissionService.insertPremission(premissions);
