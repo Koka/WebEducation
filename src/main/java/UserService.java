@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class UserService {
     public void insertUser(Users user) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             UsersMapper userMapper = sqlSession.getMapper(UsersMapper.class);
             userMapper.insert(user);
@@ -18,7 +18,7 @@ public class UserService {
     }
 
     public Users getUserById(Integer userId) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             UsersMapper userMapper = (UsersMapper) sqlSession.getMapper(UsersMapper.class);
             return userMapper.selectByPrimaryKey(userId);
@@ -28,7 +28,7 @@ public class UserService {
     }
 
     public List<Users> getAllUsers() {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             UsersMapper userMapper = sqlSession.getMapper(UsersMapper.class);
             return userMapper.getAllUsers();
@@ -39,7 +39,7 @@ public class UserService {
 
 
     public void deleteUser(Integer userId) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             UsersMapper userMapper = sqlSession.getMapper(UsersMapper.class);
             userMapper.deleteByPrimaryKey(userId);

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/MyBatisDBCP">
+
+    <Resource name="jdbc/test" auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:postgresql://localhost:5432/postgres"
+              username="postgres"
+              password="root"
+              maxActive="100" maxIdle="30" maxWait="10000"
+              removeAbandoned="true"
+              removeAbandonedTimeout="60"
+              logAbandoned="true"
+            />
+
+</Context>
