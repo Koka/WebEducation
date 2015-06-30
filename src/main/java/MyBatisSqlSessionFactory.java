@@ -2,7 +2,6 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import java.io.IOException;
 import java.io.Reader;
 
 /**
@@ -11,15 +10,39 @@ import java.io.Reader;
 public class MyBatisSqlSessionFactory {
     private static SqlSessionFactory SQL_SESSION_FACTORY = null;
 
-    public static SqlSessionFactory getSqlSessionFactory(){
+    public static SqlSessionFactory getSqlSessionFactory() {
         if(SQL_SESSION_FACTORY==null){
             Reader reader = null;
             try {
-                reader = Resources.getResourceAsReader("/mybatis-config.xml");
-            } catch (IOException e) {
+                Class.forName("org.postgresql.Driver");
+                reader = Resources.getResourceAsReader("mybatis-config.xml");
+                SQL_SESSION_FACTORY = new SqlSessionFactoryBuilder().build(reader, "development");
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-            SQL_SESSION_FACTORY = new SqlSessionFactoryBuilder().build(reader);
+
+
+            /*InitialContext cxt = null;
+            try {
+                cxt = new InitialContext();
+            } catch (NamingException e) {
+                e.printStackTrace();
+            }
+            if ( cxt == null ) {
+                System.err.println("no context");
+            }
+
+            DataSource ds = null;
+            try {
+                ds = (DataSource) cxt.lookup( "java:/comp/env/jdbc/test" );
+            } catch (NamingException e) {
+                e.printStackTrace();
+            }
+
+            if ( ds == null ) {
+                System.err.println("no db");
+            }*/
+
         }
         return SQL_SESSION_FACTORY;
     }

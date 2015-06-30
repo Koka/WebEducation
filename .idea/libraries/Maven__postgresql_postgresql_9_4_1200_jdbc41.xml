@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="Maven: postgresql:postgresql:9.4-1200-jdbc41">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.4-1200-jdbc41/postgresql-9.4-1200-jdbc41.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.4-1200-jdbc41/postgresql-9.4-1200-jdbc41-javadoc.jar!/" />
     </JAVADOC>
