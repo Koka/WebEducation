@@ -31,7 +31,7 @@ create table premissions (
 );
 
 create table user_group (
-  user_id SERIAL REFERENCES users ,
+  user_id SERIAL REFERENCES users,
   group_id SERIAL REFERENCES groups
 );
 

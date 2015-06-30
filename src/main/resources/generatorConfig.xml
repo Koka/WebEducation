@@ -17,10 +17,19 @@
                          targetProject="MAVEN" />
         <javaClientGenerator targetPackage="target.gen.mapper"
                              targetProject="MAVEN" type="XMLMAPPER" />
-        <table tableName="users"/>
-        <table tableName="groups" />
-        <table tableName="roles"/>
-        <table tableName="premissions" />
+
+        <table tableName="users">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
+        <table tableName="groups">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
+        <table tableName="roles">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
+        <table tableName="premissions">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
         <table tableName="user_group"/>
         <table tableName="user_role" />
         <table tableName="role_premission" />
