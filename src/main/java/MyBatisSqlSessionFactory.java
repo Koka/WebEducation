@@ -20,29 +20,6 @@ public class MyBatisSqlSessionFactory {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
-            /*InitialContext cxt = null;
-            try {
-                cxt = new InitialContext();
-            } catch (NamingException e) {
-                e.printStackTrace();
-            }
-            if ( cxt == null ) {
-                System.err.println("no context");
-            }
-
-            DataSource ds = null;
-            try {
-                ds = (DataSource) cxt.lookup( "java:/comp/env/jdbc/test" );
-            } catch (NamingException e) {
-                e.printStackTrace();
-            }
-
-            if ( ds == null ) {
-                System.err.println("no db");
-            }*/
-
         }
         return SQL_SESSION_FACTORY;
     }
