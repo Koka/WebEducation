@@ -8,41 +8,41 @@ drop table if exists premissions;
 
 
 create table users (
-  id    bigserial primary key,
+  id    SERIAL primary key,
   name varchar(20) not null
 );
 
 create table groups (
-  id    bigserial primary key,
+  id    SERIAL primary key,
   name VARCHAR(20) NOT NULL
 
 );
 
 create table roles (
-  id    bigserial primary key,
+  id    SERIAL primary key,
   name VARCHAR(20) NOT NULL
 
 );
 
 create table premissions (
-  id    bigserial primary key,
+  id    SERIAL primary key AUTO_INCREMENT,
   name VARCHAR(20) NOT NULL
 
 );
 
 create table user_group (
-  user_id bigserial REFERENCES users,
-  group_id bigserial REFERENCES groups
+  user_id SERIAL REFERENCES users ,
+  group_id SERIAL REFERENCES groups
 );
 
 create table user_role (
-  user_id bigserial REFERENCES users,
-  role_id bigserial REFERENCES roles
+  user_id SERIAL REFERENCES users,
+  role_id SERIAL REFERENCES roles
 );
 
 create table role_premission (
-  role_id bigserial REFERENCES roles,
-  premission_id bigserial REFERENCES premissions
+  role_id SERIAL REFERENCES roles,
+  premission_id SERIAL REFERENCES premissions
 );
 
 

@@ -1,6 +1,8 @@
-import org.apache.ibatis.session.SqlSession;
+package ru.grand.edu;
 
-import java.util.List;
+import org.apache.ibatis.session.SqlSession;
+import target.gen.domain.Users;
+import target.gen.mapper.UsersMapper;
 
 /**
  * Created by Grand on 25.04.2015.
@@ -22,16 +24,6 @@ public class UserService {
         try {
             UsersMapper userMapper = (UsersMapper) sqlSession.getMapper(UsersMapper.class);
             return userMapper.selectByPrimaryKey(userId);
-        } finally {
-            sqlSession.close();
-        }
-    }
-
-    public List<Users> getAllUsers() {
-        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
-        try {
-            UsersMapper userMapper = sqlSession.getMapper(UsersMapper.class);
-            return userMapper.getAllUsers();
         } finally {
             sqlSession.close();
         }

@@ -1,6 +1,8 @@
-import org.apache.ibatis.session.SqlSession;
+package ru.grand.edu;
 
-import java.util.List;
+import org.apache.ibatis.session.SqlSession;
+import target.gen.domain.Premissions;
+import target.gen.mapper.PremissionsMapper;
 
 /**
  * Created by Grand on 25.04.2015.
@@ -22,16 +24,6 @@ public class PremissionService {
         try {
             PremissionsMapper premissionMapper = (PremissionsMapper) sqlSession.getMapper(PremissionsMapper.class);
             return premissionMapper.selectByPrimaryKey(premissionId);
-        } finally {
-            sqlSession.close();
-        }
-    }
-
-    public List<Premissions> getAllPremissions() {
-        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
-        try {
-            PremissionsMapper premissionMapper = sqlSession.getMapper(PremissionsMapper.class);
-            return premissionMapper.getAllPremissions();
         } finally {
             sqlSession.close();
         }

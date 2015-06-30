@@ -1,3 +1,8 @@
+package ru.grand.edu;
+
+import target.gen.domain.Roles;
+import target.gen.domain.Users;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +16,7 @@ public class UserRoleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer userId = Integer.parseInt(request.getParameter("userId"));
         Integer roleId = Integer.parseInt(request.getParameter("roleId"));
-        System.out.println(userId+" "+roleId);
+        System.out.println(userId + " " + roleId);
         UserService rs = DAOFactory.getUserService();
         Users user = rs.getUserById(userId);
         RoleService ps = DAOFactory.getRoleService();

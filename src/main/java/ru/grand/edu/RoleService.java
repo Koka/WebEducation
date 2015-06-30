@@ -1,6 +1,8 @@
-import org.apache.ibatis.session.SqlSession;
+package ru.grand.edu;
 
-import java.util.List;
+import org.apache.ibatis.session.SqlSession;
+import target.gen.domain.Roles;
+import target.gen.mapper.RolesMapper;
 
 /**
  * Created by Grand on 25.04.2015.
@@ -27,15 +29,6 @@ public class RoleService {
         }
     }
 
-    public List<Roles> getAllRoles() {
-        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
-        try {
-            RolesMapper roleMapper = sqlSession.getMapper(RolesMapper.class);
-            return roleMapper.getAllRoles();
-        } finally {
-            sqlSession.close();
-        }
-    }
 
 
     public void deleteRole(Integer roleId) {

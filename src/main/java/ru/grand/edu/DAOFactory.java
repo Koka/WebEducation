@@ -1,14 +1,16 @@
+package ru.grand.edu;
+
 /**
  * Created by Grand on 14.05.2015.
  */
 public class DAOFactory {
-    private static GroupService groupService=null;
-    private static PremissionService premissionService=null;
-    private static RoleService roleService=null;
-    private static UserService userService=null;
-    private static UserGroupService userGroupService=null;
-    private static UserRoleService userRoleService=null;
-    private static RolePremissionService rolePremissionService=null;
+    private static GroupService groupService = null;
+    private static PremissionService premissionService = null;
+    private static RoleService roleService = null;
+    private static UserService userService = null;
+    private static UserGroupService userGroupService = null;
+    private static UserRoleService userRoleService = null;
+    private static RolePremissionService rolePremissionService = null;
 
     public static GroupService getGroupService() {
         return groupService;
@@ -38,7 +40,7 @@ public class DAOFactory {
         return rolePremissionService;
     }
 
-    static{
+    static {
         groupService = new GroupService();
         premissionService = new PremissionService();
         roleService = new RoleService();

@@ -1,3 +1,8 @@
+package ru.grand.edu;
+
+import target.gen.domain.Groups;
+import target.gen.domain.Users;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +16,7 @@ public class UserGroupServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer userid = Integer.parseInt(request.getParameter("userId"));
         Integer groupid = Integer.parseInt(request.getParameter("groupId"));
-        System.out.println(userid+" "+groupid);
+        System.out.println(userid + " " + groupid);
         UserService us = DAOFactory.getUserService();
         Users user = us.getUserById(userid);
         GroupService gs = DAOFactory.getGroupService();

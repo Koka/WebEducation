@@ -1,3 +1,7 @@
+package ru.grand.edu;
+
+import target.gen.domain.Premissions;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

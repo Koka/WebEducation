@@ -15,65 +15,65 @@
     </welcome-file-list>
     <servlet>
         <servlet-name>Group</servlet-name>
-        <servlet-class>GroupServlet</servlet-class>
+        <servlet-class>ru.grand.edu.GroupServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Group</servlet-name>
-        <url-pattern>/GroupServlet</url-pattern>
+        <url-pattern>/ru.grand.edu.GroupServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>User</servlet-name>
-        <servlet-class>UserServlet</servlet-class>
+        <servlet-class>ru.grand.edu.UserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>User</servlet-name>
-        <url-pattern>/UserServlet</url-pattern>
+        <url-pattern>/ru.grand.edu.UserServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>Premission</servlet-name>
-        <servlet-class>PremissionServlet</servlet-class>
+        <servlet-class>ru.grand.edu.PremissionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Premission</servlet-name>
-        <url-pattern>/PremissionServlet</url-pattern>
+        <url-pattern>/ru.grand.edu.PremissionServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>Role</servlet-name>
-        <servlet-class>RoleServlet</servlet-class>
+        <servlet-class>ru.grand.edu.RoleServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Role</servlet-name>
-        <url-pattern>/RoleServlet</url-pattern>
+        <url-pattern>/ru.grand.edu.RoleServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>UserGroup</servlet-name>
-        <servlet-class>UserGroupServlet</servlet-class>
+        <servlet-class>ru.grand.edu.UserGroupServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserGroup</servlet-name>
-        <url-pattern>/UserGroupServlet</url-pattern>
+        <url-pattern>/ru.grand.edu.UserGroupServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>RolePremission</servlet-name>
-        <servlet-class>RolePremissionServlet</servlet-class>
+        <servlet-class>ru.grand.edu.RolePremissionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RolePremission</servlet-name>
-        <url-pattern>/RolePremissionServlet</url-pattern>
+        <url-pattern>/ru.grand.edu.RolePremissionServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>UserRole</servlet-name>
-        <servlet-class>UserRoleServlet</servlet-class>
+        <servlet-class>ru.grand.edu.UserRoleServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserRole</servlet-name>
-        <url-pattern>/UserRoleServlet</url-pattern>
+        <url-pattern>/ru.grand.edu.UserRoleServlet</url-pattern>
     </servlet-mapping>
 
     <resource-ref>

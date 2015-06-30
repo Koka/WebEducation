@@ -1,6 +1,8 @@
-import org.apache.ibatis.session.SqlSession;
+package ru.grand.edu;
 
-import java.util.List;
+import org.apache.ibatis.session.SqlSession;
+import target.gen.domain.Groups;
+import target.gen.mapper.GroupsMapper;
 
 /**
  * Created by Grand on 25.04.2015.
@@ -22,16 +24,6 @@ public class GroupService {
         try {
             GroupsMapper groupMapper = (GroupsMapper) sqlSession.getMapper(GroupsMapper.class);
             return groupMapper.selectByPrimaryKey(groupId);
-        } finally {
-            sqlSession.close();
-        }
-    }
-
-    public List<Groups> getAllGroups() {
-        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
-        try {
-            GroupsMapper groupMapper = sqlSession.getMapper(GroupsMapper.class);
-            return groupMapper.getAllGroups();
         } finally {
             sqlSession.close();
         }

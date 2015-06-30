@@ -1,3 +1,5 @@
+package ru.grand.edu;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -11,7 +13,7 @@ public class MyBatisSqlSessionFactory {
     private static SqlSessionFactory SQL_SESSION_FACTORY = null;
 
     public static SqlSessionFactory getSqlSessionFactory() {
-        if(SQL_SESSION_FACTORY==null){
+        if (SQL_SESSION_FACTORY == null) {
             Reader reader = null;
             try {
                 Class.forName("org.postgresql.Driver");
