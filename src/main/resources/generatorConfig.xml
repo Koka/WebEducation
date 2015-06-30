@@ -12,11 +12,11 @@
                         connectionURL="jdbc:postgresql://localhost:5432/postgres" userId="postgres"
                         password="root" />
         <javaModelGenerator targetPackage="domain"
-                            targetProject="O:\entities.Users\Grand\IdeaProjects\WebEducation\" />
+                            targetProject="MAVEN" />
         <sqlMapGenerator targetPackage="mapper"
-                         targetProject="O:\entities.Users\Grand\IdeaProjects\WebEducation\src\" />
+                         targetProject="MAVEN" />
         <javaClientGenerator targetPackage="mapper"
-                             targetProject="O:\entities.Users\Grand\IdeaProjects\WebEducation" type="XMLMAPPER" />
+                             targetProject="MAVEN" type="XMLMAPPER" />
         <table tableName="users"/>
         <table tableName="groups" />
         <table tableName="roles"/>
