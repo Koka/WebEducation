@@ -8,7 +8,7 @@ import java.util.List;
 public class RolePremissionService {
 
     public void insertPremissionRole(Premissions user, Roles group) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             RolePremissionMapper userRoleMapper = sqlSession.getMapper(RolePremissionMapper.class);
             RolePremission userRole = new RolePremission();
@@ -22,7 +22,7 @@ public class RolePremissionService {
     }
 
     public List<RolePremission> selectByPremission(Premissions premission) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             RolePremissionMapper userRoleMapper = sqlSession.getMapper(RolePremissionMapper.class);
             return userRoleMapper.selectByPremission(premission.getId());
@@ -32,7 +32,7 @@ public class RolePremissionService {
     }
 
     public List<RolePremission> selectByRole(Roles role) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             RolePremissionMapper userRoleMapper = sqlSession.getMapper(RolePremissionMapper.class);
             return userRoleMapper.selectByPremission(role.getId());

@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class RoleService {
     public void insertRole(Roles role) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             RolesMapper roleMapper = sqlSession.getMapper(RolesMapper.class);
             roleMapper.insert(role);
@@ -18,7 +18,7 @@ public class RoleService {
     }
 
     public Roles getRoleById(Integer roleId) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             RolesMapper roleMapper = (RolesMapper) sqlSession.getMapper(RolesMapper.class);
             return roleMapper.selectByPrimaryKey(roleId);
@@ -28,7 +28,7 @@ public class RoleService {
     }
 
     public List<Roles> getAllRoles() {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             RolesMapper roleMapper = sqlSession.getMapper(RolesMapper.class);
             return roleMapper.getAllRoles();

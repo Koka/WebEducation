@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class PremissionService {
     public void insertPremission(Premissions premission) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             PremissionsMapper premissionMapper = sqlSession.getMapper(PremissionsMapper.class);
             premissionMapper.insert(premission);
@@ -18,7 +18,7 @@ public class PremissionService {
     }
 
     public Premissions getPremissionById(Integer premissionId) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             PremissionsMapper premissionMapper = (PremissionsMapper) sqlSession.getMapper(PremissionsMapper.class);
             return premissionMapper.selectByPrimaryKey(premissionId);
@@ -28,7 +28,7 @@ public class PremissionService {
     }
 
     public List<Premissions> getAllPremissions() {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             PremissionsMapper premissionMapper = sqlSession.getMapper(PremissionsMapper.class);
             return premissionMapper.getAllPremissions();
@@ -39,7 +39,7 @@ public class PremissionService {
 
 
     public void deletePremission(Integer premissionId) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             PremissionsMapper premissionMapper = sqlSession.getMapper(PremissionsMapper.class);
             premissionMapper.deleteByPrimaryKey(premissionId);

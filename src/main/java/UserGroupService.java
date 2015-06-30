@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class UserGroupService {
     public void insertUserGroup(Users user, Groups group) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             UserGroupMapper userGroupMapper = sqlSession.getMapper(UserGroupMapper.class);
             UserGroup userGroup = new UserGroup();
@@ -21,7 +21,7 @@ public class UserGroupService {
     }
 
     public List<UserGroup> selectByUser(Users user) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             UserGroupMapper userGroupMapper = sqlSession.getMapper(UserGroupMapper.class);
             return userGroupMapper.selectByUser(user.getId());
@@ -31,7 +31,7 @@ public class UserGroupService {
     }
 
     public List<UserGroup> selectByGroup(Groups group) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSessionFactory().openSession();
         try {
             UserGroupMapper userGroupMapper = sqlSession.getMapper(UserGroupMapper.class);
             return userGroupMapper.selectByUser(group.getId());
