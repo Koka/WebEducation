@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form action="UserGroupServlet">
+<form action="ru.grand.edu.UserGroupServlet">
   User id: <br>
   <input type="text" name="userId"size="20px"> <br>
   Group id: <br>

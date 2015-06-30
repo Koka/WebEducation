@@ -16,7 +16,7 @@
   <title> Groups </title>
 </head>
 <body>
-<form action="GroupServlet">
+<form action="ru.grand.edu.GroupServlet">
   Add new group: <br>
   <input type="text" name="groupname"size="20px">
   <input type="submit" value="submit">

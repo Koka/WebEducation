@@ -15,7 +15,7 @@
   <title> Premissions </title>
 </head>
 <body>
-<form action="PremissionServlet">
+<form action="ru.grand.edu.PremissionServlet">
   Add new premission: <br>
   <input type="text" name="premissionname"size="20px">
   <input type="submit" value="submit">

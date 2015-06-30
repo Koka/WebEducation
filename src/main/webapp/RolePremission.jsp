@@ -11,7 +11,7 @@
     <title></title>
 </head>
 <body>
-<form action="RolePremissionServlet">
+<form action="ru.grand.edu.RolePremissionServlet">
   Role id: <br>
   <input type="text" name="roleId"size="20px"> <br>
   Premission id: <br>

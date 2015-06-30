@@ -23,7 +23,7 @@
   <title> Users </title>
 </head>
 <body>
-<form action="UserServlet">
+<form action="ru.grand.edu.UserServlet">
   Add new user: <br>
   <input type="text" name="username"size="20px">
   <input type="submit" value="submit">

@@ -15,7 +15,7 @@
   <title> Roles </title>
 </head>
 <body>
-<form action="RoleServlet">
+<form action="ru.grand.edu.RoleServlet">
   Add new role: <br>
   <input type="text" name="rolename"size="20px">
   <input type="submit" value="submit">
